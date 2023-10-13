@@ -9,8 +9,9 @@ export function Search() {
         <div className="bg-[#ffffff1b] bg-gradient-to-r from-[#ffffff25] p-5 rounded-[20px]">
           <form>
             <div>
+
             <Input className=" top-0 right-0 text-white border-[#fff0] bg-[#ffffff45] h-[40px]  rounded-[20px]" />
-            <div className="">
+            <div className="absolute top-5 right-24">
             <ParametrsMenu />
             </div>
             
