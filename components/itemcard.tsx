@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import BasicRating from "./rating";
-import { YMaps, Map } from "@pbe/react-yandex-maps";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 export function Item() {
   return (
@@ -43,11 +43,18 @@ export function Item() {
           </div>
         </div>
         <div className=" p-5">
-          <YMaps >
+          <YMaps>
             <Map
-              className="h-full w-full rounded-full block"
-              defaultState={{ center: [55.75, 37.57], zoom: 9 }}
-            ></Map>
+              className="h-full w-full rounded-md"
+              defaultState={{ center: [55.758798, 37.75221], zoom: 15 }}
+            >
+              <Placemark
+                geometry={[55.758798, 37.75221]}
+                options={{
+                  iconImageHref: "",
+                }}
+              />
+            </Map>
           </YMaps>
         </div>
       </div>
