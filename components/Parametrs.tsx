@@ -22,7 +22,7 @@ export function ParametrsMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">
+        <Button variant="ghost">
           <Image src="/parametrs.png" height={30} width={30} alt="sea" />
         </Button>
       </DropdownMenuTrigger>
