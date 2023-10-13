@@ -3,8 +3,10 @@
 import Image from "next/image";
 import BasicRating from "./rating";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+import { useWindowSize } from "@/hook/useWindowSize";
 
 export function Item() {
+  const { height, width } = useWindowSize();
   return (
     <div>
       <div className="grid  md:grid-cols-2 relative ml-[10%] mr-[10%] min-[420px]:ml-[15%] min-[420px]:mr-[15%] bg-[#ffffff0f] bg-gradient-to-r from-[#ffffff3d] rounded-xl  lg:grid-cols-2 text-white">
@@ -42,21 +44,23 @@ export function Item() {
             <div className="text-xs md:text-base text-[#848484]">Шоссе</div>
           </div>
         </div>
-        <div className=" p-5">
-          <YMaps>
-            <Map
-              className="h-full w-full rounded-md"
-              defaultState={{ center: [55.758798, 37.75221], zoom: 15 }}
-            >
-              <Placemark
-                geometry={[55.758798, 37.75221]}
-                options={{
-                  iconImageHref: "",
-                }}
-              />
-            </Map>
-          </YMaps>
-        </div>
+        {width > 1050 && (
+          <div className="flex justify-center  p-5">
+            <YMaps>
+              <Map
+                className="h-full w-full rounded-md"
+                defaultState={{ center: [55.758798, 37.75221], zoom: 15 }}
+              >
+                <Placemark
+                  geometry={[55.758798, 37.75221]}
+                  options={{
+                    iconImageHref: "",
+                  }}
+                />
+              </Map>
+            </YMaps>
+          </div>
+        )}
       </div>
     </div>
   );

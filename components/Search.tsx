@@ -108,7 +108,7 @@ export function Search() {
                     <div>
                       Снять/внести
                       <div>
-                        <Switch className="absolute bg-red-300" />
+                        <Switch color="" />
                       </div>
                     </div>
                   </div>
