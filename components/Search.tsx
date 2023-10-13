@@ -31,7 +31,7 @@ export function Search() {
                   <Input className=" top-0 text-white border-[#fff0] bg-[#ffffff45] h-[40px]  rounded-[20px] mt-4" />
                 </div>
                 <div className="mt-8">
-                  Расстояние
+                  Расстояниеe
                   <div className="mt-4">
                   <RadioGroupDemo />
                   </div>
@@ -131,7 +131,7 @@ export function Search() {
                         </label>
                       </div>
                       <div className="flex items-center space-x-2 mt-4">
-                        <Checkbox id="terms" />
+                        <Checkbox id="terms"/>
                         <label
                           htmlFor="terms"
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
