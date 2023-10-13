@@ -4,7 +4,7 @@ import BasicRating from "./rating";
 export function Item() {
   return (
     <div>
-      <div className="grid grid-cols-2 relative ml-[10%] mr-[10%] min-[420px]:ml-[10%] min-[420px]:mr-[10%] bg-[#ffffff0f] bg-gradient-to-r from-[#ffffff3d] rounded-xl  lg:grid-cols-2 text-white">
+      <div className="grid grid-cols-2 relative ml-[10%] mr-[10%] min-[420px]:ml-[15%] min-[420px]:mr-[15%] bg-[#ffffff0f] bg-gradient-to-r from-[#ffffff3d] rounded-xl  lg:grid-cols-2 text-white">
         <div className="grid grid-rows-4 p-5">
           <div className="">
             <div className="text-4xl">

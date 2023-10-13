@@ -5,11 +5,15 @@ import { Input } from "./ui/input";
 export function Search() {
   return (
     <div>
-      <div className="relative ml-[10%] mr-[10%] min-[420px]:ml-[10%] min-[420px]:mr-[10%] mt-32">
+      <div className="relative ml-[10%] mr-[10%] min-[420px]:ml-[15%] min-[420px]:mr-[15%] mt-32">
         <div className="bg-[#ffffff1b] bg-gradient-to-r from-[#ffffff25] p-5 rounded-[20px]">
           <form>
+            <div>
             <Input className=" top-0 right-0 text-white border-[#fff0] bg-[#ffffff45] h-[40px]  rounded-[20px]" />
+            <div className="">
             <ParametrsMenu />
+            </div>
+            
             <Button
               type="submit"
               variant="default"
@@ -17,8 +21,10 @@ export function Search() {
             >
               Найти
             </Button>
+            </div>
           </form>
         </div>
+        
       </div>
     </div>
   );
