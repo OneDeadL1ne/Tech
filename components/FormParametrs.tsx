@@ -76,6 +76,7 @@ export function ParametrsForm() {
                   Select the items you want to display in the sidebar.
                 </FormDescription>
               </div>
+              `{" "}
               {items.map((item) => (
                 <FormField
                   key={item.id}

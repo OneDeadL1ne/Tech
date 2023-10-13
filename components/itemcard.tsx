@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import BasicRating from "./rating";
+import { YMaps, Map } from "@pbe/react-yandex-maps";
 
 export function Item() {
   return (
@@ -16,8 +19,10 @@ export function Item() {
           </div>
 
           <div>
-          <div className="text-sm md:text-lg inline-block">Обслуживание</div>
-          <div className="inline-flex m-1"><Image src="/dopinf.png" alt="" width={10} height={10}/></div>
+            <div className="text-sm md:text-lg inline-block">Обслуживание</div>
+            <div className="inline-flex m-1">
+              <Image src="/dopinf.png" alt="" width={10} height={10} />
+            </div>
             <div className="text-[#848484]">
               <div className="text-xs md:text-base">Физ лица</div>
               <div className="text-xs md:text-base">Юр лица</div>
@@ -25,7 +30,9 @@ export function Item() {
           </div>
           <div>
             <div className="text-sm md:text-lg inline-block">Режим</div>
-            <div className="inline-flex m-1"><Image src="/dopinf.png" alt="" width={10} height={10}/></div>
+            <div className="inline-flex m-1">
+              <Image src="/dopinf.png" alt="" width={10} height={10} />
+            </div>
             <div className="text-xs md:text-base text-[#848484]">10 00</div>
           </div>
 
@@ -36,8 +43,12 @@ export function Item() {
           </div>
         </div>
         <div className="flex justify-center p-5">
-          <Image src="/test.png" alt="" width={300} height={100} />
-          
+          <YMaps>
+            <Map
+              className="h-full w-full"
+              defaultState={{ center: [55.75, 37.57], zoom: 9 }}
+            ></Map>
+          </YMaps>
         </div>
       </div>
     </div>
