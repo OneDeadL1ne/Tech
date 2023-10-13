@@ -36,7 +36,7 @@ export function Search() {
                     htmlFor="terms"
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   >
-                    1 км
+                    1 Км
                   </label>
                 </div>
               </div>
