@@ -3,8 +3,8 @@ import Image from "next/image"
 export function Item(){
     return <div>
         
-        <div className="grid grid-cols-2 relative ml-[10%] mr-[10%] min-[420px]:ml-[20%] min-[420px]:mr-[20%] bg-[#ffffff0f] bg-gradient-to-r from-[#ffffff3d] rounded-xl  lg:grid-cols-2 text-white">
-            <div className="grid grid-rows-4 ">
+        <div className="grid grid-cols-2 relative ml-[10%] mr-[10%] min-[420px]:ml-[10%] min-[420px]:mr-[10%] bg-[#ffffff0f] bg-gradient-to-r from-[#ffffff3d] rounded-xl  lg:grid-cols-2 text-white">
+            <div className="grid grid-rows-4 p-5">
              <div className=""> 
                 <div className="text-4xl">
                 Заголовок
@@ -50,8 +50,8 @@ export function Item(){
 
 
             </div>
-            <div>
-            <Image src="/test.png" alt="" width={10000} height={1000000}/>
+            <div className="flex justify-center p-5">
+            <Image src="/test.png" alt="" width={400} height={400}/>
             </div>
         </div>
 
