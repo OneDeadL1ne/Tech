@@ -26,7 +26,7 @@ export function ParametrsMenu() {
           <Image src="/parametrs.png" height={30} width={30} alt="sea" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-56 bg-white rounded-[10px] ">
         <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
