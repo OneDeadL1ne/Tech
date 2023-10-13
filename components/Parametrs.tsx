@@ -25,9 +25,8 @@ export function ParametrsMenu() {
           <Image src="/parametrs.png" height={25} width={25} alt="sea" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-[1080px]  bg-white rounded-[10px] ">
+      <DropdownMenuContent className="absolute  bg-white rounded-[10px] ">
         <DropdownMenuLabel>Параметры поиска</DropdownMenuLabel>
-        <ParametrsForm />
       </DropdownMenuContent>
     </DropdownMenu>
   );
