@@ -15,10 +15,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
+import { ParametrsForm } from "./FormParametrs";
 
 export function ParametrsMenu() {
-  const [position, setPosition] = React.useState("bottom");
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -26,14 +25,9 @@ export function ParametrsMenu() {
           <Image src="/parametrs.png" height={25} width={25} alt="sea" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-white rounded-[10px] ">
-        <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
+      <DropdownMenuContent className="w-[1080px]  bg-white rounded-[10px] ">
+        <DropdownMenuLabel>Параметры поиска</DropdownMenuLabel>
+        <ParametrsForm />
       </DropdownMenuContent>
     </DropdownMenu>
   );
