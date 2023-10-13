@@ -30,8 +30,15 @@ export function Search() {
               </div>
               <div className="mt-8">
                 Расстояние
-                <div><Checkbox/> 1</div>
-                
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="terms" />
+                  <label
+                    htmlFor="terms"
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    1 км
+                  </label>
+                </div>
               </div>
             </div>
           </form>
