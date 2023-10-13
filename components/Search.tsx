@@ -9,7 +9,7 @@ export function Search() {
         <div className="bg-[#ffffff1b] bg-gradient-to-r from-[#ffffff25] p-5 rounded-[20px]">
           <form>
             <Input className=" top-0 right-0 text-white border-[#fff0] bg-[#ffffff45] h-[40px]  rounded-[20px]" />
-
+            <ParametrsMenu />
             <Button
               type="submit"
               variant="default"
