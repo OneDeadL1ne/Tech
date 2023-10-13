@@ -42,7 +42,7 @@ export function Item() {
             <div className="text-xs md:text-base text-[#848484]">Шоссе</div>
           </div>
         </div>
-        <div className="flex justify-center p-5">
+        <div className=" p-5">
           <YMaps>
             <Map
               className="h-full w-full"
