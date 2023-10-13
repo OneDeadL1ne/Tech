@@ -30,8 +30,7 @@ export function Item() {
           </div>
 
           <div>
-            <div className="text-lg inline-block">Адрес</div>
-            <div className="inline-flex m-1"><Image src="/dopinf.png" alt="" width={10} height={10}/></div>
+            <div className="text-lg">Адрес</div>
             <div className="text-[#848484]">Шоссе</div>
             <div className="text-[#848484]">Шоссе</div>
           </div>
