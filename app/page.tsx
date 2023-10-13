@@ -6,6 +6,9 @@ import { Item } from "@/components/itemcard";
 export default function Home() {
   return (
     <main>
+      <div>
+        <Search />
+      </div>
       <Item />
     </main>
   );
