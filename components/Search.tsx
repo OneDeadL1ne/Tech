@@ -1,5 +1,6 @@
 import { ParametrsMenu } from "./Parametrs";
 import { Button } from "./ui/button";
+import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
 
 export function Search() {
@@ -21,6 +22,17 @@ export function Search() {
               >
                 Найти
               </Button>
+            </div>
+            <div className="text-white">
+              <div className="mt-8">
+                Метро
+                <Input className=" top-0 max-w-[50%] text-white border-[#fff0] bg-[#ffffff45] h-[40px]  rounded-[20px]" />
+              </div>
+              <div className="mt-8">
+                Расстояние
+                <div><Checkbox/> 1</div>
+                
+              </div>
             </div>
           </form>
         </div>
