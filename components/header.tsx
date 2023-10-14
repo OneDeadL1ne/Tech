@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { useWindowSize } from "@/hook/useWindowSize";
@@ -12,18 +12,9 @@ export function Header() {
       className="relative min-w-full text-white grid grid-cols-2 p-5
     "
     >
-      <Link href="https://moretech.vtb.ru/" className="text-white text-3xl">
-        More.Tech
+      <Link href="/" className="text-white text-3xl">
+        <Image src="/logo.png" alt="logo" width={120} height={56} />
       </Link>
-      <div className="grid grid-cols-1 place-items-end">
-        <div className="place-items-end">
-          {router !== "/" && (
-            <Button variant="ghost">
-              <Link href="/">Главная</Link>
-            </Button>
-          )}
-        </div>
-      </div>
     </div>
   );
 }
