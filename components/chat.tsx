@@ -7,32 +7,45 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { FormEvent, useState } from "react";
 
+type Data = {
+  author: string;
+  message: string;
+};
+
 export function Chat() {
   const [text, setText] = useState("");
-  const [messages, setMessages] = useState(Array<string>);
+  const [messages, setMessages] = useState(Array<Data>);
 
-  async function toMessage(form: FormData) {
-    "use server";
-    const message = form.get("message")?.toString();
-    console.log(message);
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const res: Data = { author: "user", message: text };
+
+    messages.push(res);
+
+    setText("");
   }
 
   return (
     <div>
       <div className="min-h-[500px] relative ml-[10%] mr-[10%] min-[420px]:ml-[15%] min-[420px]:mr-[15%] bg-[#ffffff0f] bg-gradient-to-r from-[#ffffff3d] rounded-xl  lg:grid-cols-2 text-black">
         <div className="p-3">
-          <div className="flex justify-end">
-            {messages.map((mes) => (
-              <div className="  bg-[#00AAFF] rounded-[10px] max-w-[300px] p-2 text-white">
-                {mes}
-              </div>
-            ))}
-          </div>
-          <div className="flex justify-start">
-            <div className="  bg-[#002882] rounded-[10px] max-w-[300px] p-2 text-white">
-              wefewwevewvewv
+          {messages.map((mes) => (
+            <div>
+              {mes.author === "user" ? (
+                <div className="flex justify-end">
+                  <div className="  bg-[#00AAFF] rounded-[10px] max-w-[300px] p-2 text-white">
+                    {mes.message}
+                  </div>
+                </div>
+              ) : (
+                <div className="flex justify-start">
+                  <div className="  bg-[#002882] rounded-[10px] max-w-[300px] p-2 text-white">
+                    {mes.message}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
+          ))}
         </div>
         <div className="absolute bottom-0 w-[100%] p-3 grid grid-rows-2">
           <div className="grid grid-cols-4 mb-3 place-items-center">
@@ -58,9 +71,10 @@ export function Chat() {
               Применить
             </Button>
           </div>
-          <form action={toMessage}>
+          <form onSubmit={onSubmit}>
             <Input
               name="messaage"
+              value={text}
               className="rounded-[10px] bg-white"
               onChange={(e) => {
                 setText(e.target.value);
