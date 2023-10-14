@@ -4,6 +4,7 @@ import Image from "next/image";
 import BasicRating from "./rating";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import { useWindowSize } from "@/hook/useWindowSize";
+import { WorkTime } from "./WorkTime";
 
 export function Item() {
   const { height, width } = useWindowSize();
@@ -22,9 +23,7 @@ export function Item() {
 
           <div>
             <div className="text-sm md:text-lg inline-block">Обслуживание</div>
-            <div className="inline-flex m-1">
-              <Image src="/dopinf.png" alt="" width={10} height={10} />
-            </div>
+
             <div className="text-[#848484]">
               <div className="text-xs md:text-base">Физ лица</div>
               <div className="text-xs md:text-base">Юр лица</div>
@@ -32,8 +31,8 @@ export function Item() {
           </div>
           <div>
             <div className="text-sm md:text-lg inline-block">Режим</div>
-            <div className="inline-flex m-1">
-              <Image src="/dopinf.png" alt="" width={10} height={10} />
+            <div className="inline-flex ">
+              <WorkTime />
             </div>
             <div className="text-xs md:text-base text-[#848484]">10 00</div>
           </div>
