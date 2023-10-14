@@ -14,7 +14,12 @@ export function Chat() {
 
        </div>
        <div className="absolute bottom-0 w-[100%] p-3">
-        <Button content="qwe" className="absolut bottom-0 right-0 w-4 h-4 bg-slate-800"/>
+       <Button
+        type="submit"
+        className="bg-[#ffffff45] hover:bg-[#a1fda16b] text-white font-bold py-2 px-4 rounded-full"
+      >
+        Применить
+      </Button>
         <Input className="rounded-[10px] bg-white"/>
        </div>
       </div>
