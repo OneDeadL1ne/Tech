@@ -7,7 +7,7 @@ interface OfficeProps {
 }
 
 export default function Officepage({ params: { id } }: OfficeProps) {
-  let office = id;
+  let office;
   console.log(office);
   return (
     <div>
