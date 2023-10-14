@@ -16,7 +16,7 @@ export function Chat() {
        <div className="absolute bottom-0 w-[100%] p-3">
        <Button
         type="submit"
-        className="bg-[#ffffff45] hover:bg-[#a1fda16b] text-white font-bold py-2 px-4 rounded-full"
+        className="bg-[#ffffff45] hover:bg-[#a1fda16b] text-white font-bold py-2 px-4 rounded-full absolute bottom-0 right-0"
       >
         Применить
       </Button>
