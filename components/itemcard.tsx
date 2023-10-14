@@ -5,6 +5,7 @@ import BasicRating from "./rating";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import { useWindowSize } from "@/hook/useWindowSize";
 import { WorkTime } from "./WorkTime";
+import { InputPro } from "./InputPro";
 
 export function Item() {
   const { height, width } = useWindowSize();
@@ -60,6 +61,14 @@ export function Item() {
             </YMaps>
           </div>
         )}
+      </div>
+      <div className="grid  md:grid-cols-2 relative ml-[10%] mr-[10%] min-[420px]:ml-[15%] min-[420px]:mr-[15%]  lg:grid-cols-2 text-white">
+        <div className="grid grid-cols-2">
+        <InputPro/>
+        <div>
+          Вернуться в чат
+        </div>
+        </div>
       </div>
     </div>
   );
